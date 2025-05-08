@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VarzeaBet</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <div class="top-bar">🔥Os melhores jogos da Várzea ⚽🎰</div>
+
+  <header class="brand-bar">
+    <div class="logo">Varzea<span>⚽</span><span>Bet</span></div>
+    <div class="auth-buttons">
+    </div>
+  </header>
+
+  <nav class="nav-tabs">
+    <button class="tab active" data-target="gamesView">Jogos</button>
+    <button class="tab" data-target="longtermView">Apostas de Longo Prazo</button>
+  </nav>
+
+  <main>
+    <!-- VIEW: JOGOS -->
+    <section id="gamesView">
+      <!-- Mirassol vs Corinthians -->
+      <div class="match-card" data-match="Mirassol FC SP vs SC Corinthians SP">
+        <p><strong>10 de mai. 18:30</strong></p>
+        <h3>Mirassol FC SP vs SC Corinthians SP</h3>
+        <div class="odds">
+          <button data-choice="1" data-odds="3.19">1 – 3.19</button>
+          <button data-choice="X" data-odds="3.24">X – 3.24</button>
+          <button data-choice="2" data-odds="2.40">2 – 2.40</button>
+        </div>
+      </div>
+
+      <!-- Palmeiras vs Flamengo -->
+      <div class="match-card" data-match="Palmeiras SP vs Flamengo RJ">
+        <p><strong>11 de mai. 20:00</strong></p>
+        <h3>Palmeiras SP vs Flamengo RJ</h3>
+        <div class="odds">
+          <button data-choice="1" data-odds="2.10">1 – 2.10</button>
+          <button data-choice="X" data-odds="3.30">X – 3.30</button>
+          <button data-choice="2" data-odds="3.00">2 – 3.00</button>
+        </div>
+      </div>
+
+      <!-- São Paulo vs Santos -->
+      <div class="match-card" data-match="São Paulo SP vs Santos SP">
+        <p><strong>11 de mai. 22:00</strong></p>
+        <h3>São Paulo SP vs Santos SP</h3>
+        <div class="odds">
+          <button data-choice="1" data-odds="1.95">1 – 1.95</button>
+          <button data-choice="X" data-odds="3.45">X – 3.45</button>
+          <button data-choice="2" data-odds="4.00">2 – 4.00</button>
+        </div>
+      </div>
+
+      <!-- Coritiba vs Athletico-PR -->
+      <div class="match-card" data-match="Coritiba PR vs Athletico PR">
+        <p><strong>12 de mai. 16:00</strong></p>
+        <h3>Coritiba PR vs Athletico PR</h3>
+        <div class="odds">
+          <button data-choice="1" data-odds="2.50">1 – 2.50</button>
+          <button data-choice="X" data-odds="3.10">X – 3.10</button>
+          <button data-choice="2" data-odds="2.75">2 – 2.75</button>
+        </div>
+      </div>
+
+      <!-- Fluminense vs Botafogo -->
+      <div class="match-card" data-match="Fluminense RJ vs Botafogo RJ">
+        <p><strong>12 de mai. 18:00</strong></p>
+        <h3>Fluminense RJ vs Botafogo RJ</h3>
+        <div class="odds">
+          <button data-choice="1" data-odds="2.20">1 – 2.20</button>
+          <button data-choice="X" data-odds="3.15">X – 3.15</button>
+          <button data-choice="2" data-odds="3.40">2 – 3.40</button>
+        </div>
+      </div>
+
+      <!-- Atlético-MG vs Cruzeiro -->
+      <div class="match-card" data-match="Atlético MG vs Cruzeiro MG">
+        <p><strong>13 de mai. 21:00</strong></p>
+        <h3>Atlético MG vs Cruzeiro MG</h3>
+        <div class="odds">
+          <button data-choice="1" data-odds="2.05">1 – 2.05</button>
+          <button data-choice="X" data-odds="3.25">X – 3.25</button>
+          <button data-choice="2" data-odds="3.60">2 – 3.60</button>
+        </div>
+      </div>
+
+      <!-- Controles globais -->
+      <div class="global-controls">
+        <input id="globalAmount" type="number" placeholder="Valor da aposta (R$)" min="0.01" step="0.01"/>
+        <button id="submitAllBets">Apostar Selecionadas</button>
+      </div>
+      <div id="sumOddsDisplay">Odds totais: 0.00</div>
+    </section>
+
+    <!-- VIEW: APOSTAS DE LONGO PRAZO -->
+    <section id="longtermView" class="hidden">
+      <h1 class="longterm-title">Apostas a Longo Prazo</h1>
+      <div id="betsContainer"></div>
+    </section>
+  </main>
+
+  <footer class="bottom-nav">
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
