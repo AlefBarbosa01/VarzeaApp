@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VarzeaBet - Mobile</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Estilos específicos para a versão mobile */
+    body {
+      max-width: 480px;
+      margin: 0 auto;
+      overflow-x: hidden;
+    }
+    
+    .brand-bar {
+      flex-direction: column;
+    }
+    
+    .logo {
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    
+    .search-container {
+      max-width: 100%;
+      margin-top: 0.5rem;
+    }
+    
+    .tab {
+      font-size: 0.875rem;
+      padding: 0.75rem 0;
+    }
+    
+    .match-card {
+      padding: 0.75rem;
+    }
+    
+    .team-name {
+      font-size: 0.75rem;
+    }
+    
+    .odd-button {
+      padding: 0.5rem 0.25rem;
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <div class="marquee-container">
+      <div class="marquee-content">🔥Os melhores jogos da Várzea ⚽🥅</div>
+    </div>
+
+    <!-- Brand Bar com barra de pesquisa em linha separada - Versão Mobile -->
+    <header class="brand-bar">
+      <div class="logo">
+        <span class="white">Varzea⚽</span><span class="orange">Bet</span>
+      </div>
+
+      <div class="search-container">
+        <div class="search-wrapper">
+          <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <input type="text" id="searchInput" placeholder="Pesquisar..." class="search-input">
+          <button id="clearSearch" class="clear-search-btn hidden">✕</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Nav Tabs -->
+    <nav class="nav-tabs">
+      <button class="tab active" data-target="gamesView">Jogos</button>
+      <button class="tab" data-target="longtermView">Apostas</button>
+    </nav>
+
+    <main>
+      <!-- VIEW: JOGOS -->
+      <section id="gamesView" class="games-view">
+        <div id="matchesContainer" class="matches-container">
+          <!-- Exemplo de card de jogo para mobile -->
+          <div class="match-card">
+            <p class="match-date">10 de mai. 18:30</p>
+            <h3 class="match-title">Mirassol FC SP vs SC Corinthians SP</h3>
+            <div class="odds-container">
+              <div class="odd-column">
+                <label class="team-name">Mirassol</label>
+                <button class="odd-button">1 – 3.19</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Empate</label>
+                <button class="odd-button">X – 3.24</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Corinthians</label>
+                <button class="odd-button">2 – 2.4</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="match-card">
+            <p class="match-date">10 de mai. 18:30</p>
+            <h3 class="match-title">Palmeiras vs Flamengo</h3>
+            <div class="odds-container">
+              <div class="odd-column">
+                <label class="team-name">Palmeiras</label>
+                <button class="odd-button">1 – 3.19</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Empate</label>
+                <button class="odd-button">X – 3.24</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Flamengo</label>
+                <button class="odd-button">2 – 2.4</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles globais -->
+        <div class="global-controls">
+          <input type="number" id="betAmount" placeholder="Valor da aposta (R$)" min="0.01" step="0.01" class="bet-amount-input">
+          <button id="submitBets" class="submit-bets-btn">Apostar</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Nav -->
+    <footer class="bottom-nav">
+      <!-- Botões de navegação inferior podem ser adicionados aqui -->
+    </footer>
+  </div>
+</body>
+</html>

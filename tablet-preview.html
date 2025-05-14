@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VarzeaBet - Tablet</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Estilos específicos para a versão tablet */
+    body {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+    
+    .matches-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <div class="marquee-container">
+      <div class="marquee-content">🔥Os melhores jogos da Várzea ⚽🥅</div>
+    </div>
+
+    <!-- Brand Bar com barra de pesquisa à direita - Versão Tablet -->
+    <header class="brand-bar">
+      <div class="logo">
+        <span class="white">Varzea⚽</span><span class="orange">Bet</span>
+      </div>
+
+      <div class="search-container">
+        <div class="search-wrapper">
+          <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <input type="text" id="searchInput" placeholder="Pesquisar..." class="search-input">
+          <button id="clearSearch" class="clear-search-btn hidden">✕</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Nav Tabs -->
+    <nav class="nav-tabs">
+      <button class="tab active" data-target="gamesView">Jogos</button>
+      <button class="tab" data-target="longtermView">Apostas de Longo Prazo</button>
+    </nav>
+
+    <main>
+      <!-- VIEW: JOGOS -->
+      <section id="gamesView" class="games-view">
+        <div id="matchesContainer" class="matches-container">
+          <!-- Exemplo de cards de jogo para tablet (2 colunas) -->
+          <div class="match-card">
+            <p class="match-date">10 de mai. 18:30</p>
+            <h3 class="match-title">Mirassol FC SP vs SC Corinthians SP</h3>
+            <div class="odds-container">
+              <div class="odd-column">
+                <label class="team-name">Mirassol</label>
+                <button class="odd-button">1 – 3.19</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Empate</label>
+                <button class="odd-button">X – 3.24</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Corinthians</label>
+                <button class="odd-button">2 – 2.4</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="match-card">
+            <p class="match-date">10 de mai. 18:30</p>
+            <h3 class="match-title">Palmeiras vs Flamengo</h3>
+            <div class="odds-container">
+              <div class="odd-column">
+                <label class="team-name">Palmeiras</label>
+                <button class="odd-button">1 – 3.19</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Empate</label>
+                <button class="odd-button">X – 3.24</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Flamengo</label>
+                <button class="odd-button">2 – 2.4</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="match-card">
+            <p class="match-date">10 de mai. 18:30</p>
+            <h3 class="match-title">São Paulo vs Santos</h3>
+            <div class="odds-container">
+              <div class="odd-column">
+                <label class="team-name">São Paulo</label>
+                <button class="odd-button">1 – 3.19</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Empate</label>
+                <button class="odd-button">X – 3.24</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Santos</label>
+                <button class="odd-button">2 – 2.4</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="match-card">
+            <p class="match-date">10 de mai. 18:30</p>
+            <h3 class="match-title">Coritiba vs Athletico-PR</h3>
+            <div class="odds-container">
+              <div class="odd-column">
+                <label class="team-name">Coritiba</label>
+                <button class="odd-button">1 – 3.19</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Empate</label>
+                <button class="odd-button">X – 3.24</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Athletico-PR</label>
+                <button class="odd-button">2 – 2.4</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles globais -->
+        <div class="global-controls">
+          <input type="number" id="betAmount" placeholder="Valor da aposta (R$)" min="0.01" step="0.01" class="bet-amount-input">
+          <button id="submitBets" class="submit-bets-btn">Apostas Selecionadas</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Nav -->
+    <footer class="bottom-nav">
+      <!-- Botões de navegação inferior podem ser adicionados aqui -->
+    </footer>
+  </div>
+</body>
+</html>

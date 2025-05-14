@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VarzeaBet</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="marquee-container">
+      <div class="marquee-content">🔥Os melhores jogos da Várzea ⚽🥅</div>
+    </div>
+
+    <!-- Brand Bar com barra de pesquisa à direita -->
+    <header class="brand-bar">
+      <div class="logo">
+        <span class="white">Varzea⚽</span><span class="orange">Bet</span>
+      </div>
+
+      <div class="search-container">
+        <div class="search-wrapper">
+          <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <input type="text" id="searchInput" placeholder="Pesquisar..." class="search-input">
+          <button id="clearSearch" class="clear-search-btn hidden">✕</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Nav Tabs -->
+    <nav class="nav-tabs">
+      <button class="tab active" data-target="gamesView">Jogos</button>
+      <button class="tab" data-target="longtermView">Apostas de Longo Prazo</button>
+    </nav>
+
+    <main>
+      <!-- VIEW: JOGOS -->
+      <section id="gamesView" class="games-view">
+        <div id="matchesContainer" class="matches-container">
+          <!-- Os cards de jogos serão inseridos aqui via JavaScript -->
+        </div>
+
+        <!-- Mensagem quando nenhum jogo for encontrado -->
+        <div id="noMatchesFound" class="no-matches-found hidden">
+          <p>Nenhum jogo encontrado para "<span id="searchQueryText"></span>"</p>
+          <button id="clearSearchBtn" class="clear-search-link">Limpar pesquisa</button>
+        </div>
+
+        <!-- Controles globais -->
+        <div class="global-controls">
+          <input type="number" id="betAmount" placeholder="Valor da aposta (R$)" min="0.01" step="0.01" class="bet-amount-input">
+          <button id="submitBets" class="submit-bets-btn">Apostar Selecionadas</button>
+        </div>
+        <div id="sumOddsDisplay" class="sum-odds-display">Odds totais: 0.00 | Retorno potencial: R$ 0.00</div>
+      </section>
+
+      <!-- VIEW: APOSTAS DE LONGO PRAZO -->
+      <section id="longtermView" class="longterm-view hidden">
+        <h1 class="longterm-title">Apostas a Longo Prazo</h1>
+        <div id="longtermBetsContainer" class="longterm-bets-container">
+          <!-- O conteúdo das apostas de longo prazo será inserido aqui via JavaScript -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Canvas escondido para gerar a imagem -->
+    <canvas id="betCanvas" style="display: none;"></canvas>
+
+    <!-- Bottom Nav -->
+    <footer class="bottom-nav">
+      <!-- Botões de navegação inferior podem ser adicionados aqui -->
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

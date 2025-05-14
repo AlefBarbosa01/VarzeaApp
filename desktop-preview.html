@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VarzeaBet - Desktop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Estilos específicos para a versão desktop */
+    body {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .matches-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <div class="marquee-container">
+      <div class="marquee-content">🔥Os melhores jogos da Várzea ⚽🥅</div>
+    </div>
+
+    <!-- Brand Bar com barra de pesquisa à direita - Versão Desktop -->
+    <header class="brand-bar">
+      <div class="logo">
+        <span class="white">Varzea⚽</span><span class="orange">Bet</span>
+      </div>
+
+      <div class="search-container">
+        <div class="search-wrapper">
+          <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <input type="text" id="searchInput" placeholder="Pesquisar..." class="search-input">
+          <button id="clearSearch" class="clear-search-btn hidden">✕</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Nav Tabs -->
+    <nav class="nav-tabs">
+      <button class="tab active" data-target="gamesView">Jogos</button>
+      <button class="tab" data-target="longtermView">Apostas de Longo Prazo</button>
+    </nav>
+
+    <main>
+      <!-- VIEW: JOGOS -->
+      <section id="gamesView" class="games-view">
+        <div id="matchesContainer" class="matches-container">
+          <!-- Exemplo de cards de jogo para desktop (3 colunas) -->
+          <div class="match-card">
+            <p class="match-date">10 de mai. 18:30</p>
+            <h3 class="match-title">Mirassol FC SP vs SC Corinthians SP</h3>
+            <div class="odds-container">
+              <div class="odd-column">
+                <label class="team-name">Mirassol</label>
+                <button class="odd-button">1 – 3.19</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Empate</label>
+                <button class="odd-button">X – 3.24</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Corinthians</label>
+                <button class="odd-button">2 – 2.4</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="match-card">
+            <p class="match-date">10 de mai. 18:30</p>
+            <h3 class="match-title">Palmeiras vs Flamengo</h3>
+            <div class="odds-container">
+              <div class="odd-column">
+                <label class="team-name">Palmeiras</label>
+                <button class="odd-button">1 – 3.19</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Empate</label>
+                <button class="odd-button">X – 3.24</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Flamengo</label>
+                <button class="odd-button">2 – 2.4</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="match-card">
+            <p class="match-date">10 de mai. 18:30</p>
+            <h3 class="match-title">São Paulo vs Santos</h3>
+            <div class="odds-container">
+              <div class="odd-column">
+                <label class="team-name">São Paulo</label>
+                <button class="odd-button">1 – 3.19</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Empate</label>
+                <button class="odd-button">X – 3.24</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Santos</label>
+                <button class="odd-button">2 – 2.4</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="match-card">
+            <p class="match-date">10 de mai. 18:30</p>
+            <h3 class="match-title">Coritiba vs Athletico-PR</h3>
+            <div class="odds-container">
+              <div class="odd-column">
+                <label class="team-name">Coritiba</label>
+                <button class="odd-button">1 – 3.19</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Empate</label>
+                <button class="odd-button">X – 3.24</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Athletico-PR</label>
+                <button class="odd-button">2 – 2.4</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="match-card">
+            <p class="match-date">10 de mai. 18:30</p>
+            <h3 class="match-title">Fluminense vs Botafogo</h3>
+            <div class="odds-container">
+              <div class="odd-column">
+                <label class="team-name">Fluminense</label>
+                <button class="odd-button">1 – 3.19</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Empate</label>
+                <button class="odd-button">X – 3.24</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Botafogo</label>
+                <button class="odd-button">2 – 2.4</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="match-card">
+            <p class="match-date">10 de mai. 18:30</p>
+            <h3 class="match-title">Atlético-MG vs Cruzeiro</h3>
+            <div class="odds-container">
+              <div class="odd-column">
+                <label class="team-name">Atlético-MG</label>
+                <button class="odd-button">1 – 3.19</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Empate</label>
+                <button class="odd-button">X – 3.24</button>
+              </div>
+              <div class="odd-column">
+                <label class="team-name">Cruzeiro</label>
+                <button class="odd-button">2 – 2.4</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles globais -->
+        <div class="global-controls">
+          <input type="number" id="betAmount" placeholder="Valor da aposta (R$)" min="0.01" step="0.01" class="bet-amount-input">
+          <button id="submitBets" class="submit-bets-btn">Apostas Selecionadas</button>
+        </div>
+      </section>
+
+      <!-- VIEW: APOSTAS DE LONGO PRAZO -->
+      <section id="longtermView" class="longterm-view hidden">
+        <h1 class="longterm-title">Apostas a Longo Prazo</h1>
+        <div id="longtermBetsContainer" class="longterm-bets-container">
+          <!-- Exemplo de apostas de longo prazo -->
+          <div class="longterm-card">
+            <h3>Conjunto de Apostas (3)</h3>
+            <p class="longterm-bet-item"><strong>Mirassol FC SP vs SC Corinthians SP</strong> — Escolha: 2 - Corinthians (Odds: 2.4)</p>
+            <p class="longterm-bet-item"><strong>Palmeiras vs Flamengo</strong> — Escolha: 1 - Palmeiras (Odds: 3.19)</p>
+            <p class="longterm-bet-item"><strong>Real Madrid vs Barcelona</strong> — Escolha: X - Empate (Odds: 3.5)</p>
+            <hr class="longterm-divider">
+            <p><strong>Odds totais:</strong> 9.09</p>
+            <p><strong>Valor Apostado:</strong> R$ 50.00</p>
+            <p><strong>Potencial Retorno:</strong> R$ 454.50</p>
+            <div class="longterm-actions">
+              <button id="deleteAllBets" class="delete-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg>
+                Excluir Todas
+              </button>
+              <button id="shareOnWhatsApp" class="share-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Enviar no WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Canvas escondido para gerar a imagem -->
+    <canvas id="betCanvas" style="display: none;"></canvas>
+
+    <!-- Bottom Nav -->
+    <footer class="bottom-nav">
+      <!-- Botões de navegação inferior podem ser adicionados aqui -->
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
